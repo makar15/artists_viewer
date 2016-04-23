@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '24.0.0 rc3'
+
+    defaultConfig {
+        applicationId "com.example.makarov.musiciansviewer"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+android.packagingOptions {
+    exclude 'META-INF/LICENSE.txt'
+    exclude 'META-INF/license.txt'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/NOTICE.txt'
+    exclude 'META-INF/notice.txt'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/services/javax.annotation.processing.Processor'
+    exclude 'META-INF/ASL2.0'
+}
+
+dependencies {
+    // Support libraries
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha2'
+    compile 'com.android.support:recyclerview-v7:24.0.0-alpha2'
+
+    // Service
+    compile 'com.octo.android.robospice:robospice:1.4.14'
+    compile 'com.octo.android.robospice:robospice-spring-android:1.4.14'
+
+    // View dependency
+    compile 'com.jakewharton:butterknife:7.0.1'
+
+    // API
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+
+    // GSON
+    compile 'com.google.code.gson:gson:2.6.1'
+
+    // Libraries
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'org.codehaus.jackson:jackson-mapper-asl:1.9.13'
+
+    // Anim
+    compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.robolectric:robolectric:3.0'
+}

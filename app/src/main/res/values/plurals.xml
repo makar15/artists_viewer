@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="plurals_albums">
+        <item quantity="zero">not albums</item>
+        <item quantity="one">%1$d album</item>
+        <item quantity="few">%1$d albums</item>
+        <item quantity="many">%1$d albums</item>
+        <item quantity="other">%1$d albums</item>
+    </plurals>
+
+    <plurals name="plurals_tracks">
+        <item quantity="zero">not songs</item>
+        <item quantity="one">%1$d song</item>
+        <item quantity="few">%1$d songs</item>
+        <item quantity="many">%1$d songs</item>
+        <item quantity="other">%1$d songs</item>
+    </plurals>
+</resources>
